@@ -30,19 +30,35 @@
         </div>
         <div class="item">
             <div class="carousel">
-                <div class="carousel-inner">
-                    <img src="./images/tshirt.jpg" alt="Image 1">
-                    <img src="./images/tshirt.jpg" alt="Image 2">
-                    <img src="./images/tshirt.jpg" alt="Image 3">
+                <input type="radio" name="carousel" id="slide1" checked>
+                <input type="radio" name="carousel" id="slide2">
+                <input type="radio" name="carousel" id="slide3">
+            
+                <div class="carousel-slides">
+                  <div class="carousel-slide" id="slide1-content">
+                    <img src="./images/tshirt.jpg" alt="Slide 1">
+                    <div class="carousel-caption">
+                      <h3 class="carousel-heading">FASHION FORWARD APPAREL SOURCING</h3>
+                      <p class="carousel-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.Aliquam maxime eos deserunt facilis dolores non!</p>
+                    </div>
+                  </div>
+                  <div class="carousel-slide" id="slide2-content">
+                    <img src="./images/tshirt.jpg" alt="Slide 2">
+                  </div>
+                  <div class="carousel-slide" id="slide3-content">
+                    <img src="./images/tshirt.jpg" alt="Slide 3">
+                  </div>
                 </div>
-                <div class="carousel-radio-buttons">
-                    <input type="radio" name="carousel" checked>
-                    <input type="radio" name="carousel">
-                    <input type="radio" name="carousel">
+                
+                <div class="carousel-controls">
+                    <label for="slide1" class="control"></label>
+                    <label for="slide2" class="control"></label>
+                    <label for="slide3" class="control"></label>
                 </div>
-            </div>
+            </div>   
+        
         </div>
-        <div class="item">
+        <div class="item item2">
             <div class="company-container">
                 <div class="company-images">
                     <img src="./images/women1.jpg" alt="Image 1">
@@ -76,7 +92,7 @@
                 </div>
             </div>
         </div>
-        <div class="item">
+        <div class="item item2">
             <div class="heading">
                 <h1 class="main-heading">FASHION FORWARD APPAREL SOURCING</h1>
                 <h2 class="sub-heading">Our Products</h2>
@@ -142,7 +158,7 @@
                 </div>
             </div>
         </div>
-        <div class="item">
+        <div class="item item2">
             <div class="heading">
                 <h2 class="main-heading">FAILURE DOESN'T EXIST</h2>
                 <h3 class="sub-heading">Our Process</h3>
@@ -207,23 +223,23 @@
                     <div class="image-card-container">
                         <div class="image-card">
                             <img src="./images/knitting.jpg" alt="Image 1">
-                            <div class="image-card-label">Label 1</div>
+                            <div class="image-card-label">KNITTING</div>
                         </div>
             
                         <div class="image-card">
                             <img src="./images/knitting.jpg" alt="Image 2">
-                            <div class="image-card-label">Label 2</div>
+                            <div class="image-card-label">DYEING</div>
                         </div>
             
                         <div class="image-card">
                             <img src="./images/knitting.jpg" alt="Image 3">
-                            <div class="image-card-label">Label 3</div>
+                            <div class="image-card-label">PRINTING</div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="item">  
+        <div class="item item2">  
             <div class="company-section">
                 <div class="company-image">
                     <img src="./images/officeroom.jpg" alt="Company Image">
@@ -269,12 +285,13 @@
         <div class="item final-container">
             <p class="final">FFAS Copyright &copy; 2024. Designed by Launch Web Dreams.</p>
         </div> 
-        <script>
-            function toggleNavbar() {
-                const navbarLinks = document.querySelector('.navbar-links');
-                navbarLinks.classList.toggle('open');
-            }
-        </script>
+        
     </div>
+    <script>
+        function toggleNavbar() {
+            const navbarLinks = document.querySelector('.navbar-links');
+            navbarLinks.classList.toggle('open');
+        }
+    </script>
 </body>
 </html>
