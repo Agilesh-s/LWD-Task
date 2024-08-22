@@ -27,7 +27,7 @@
 }
 
 .navbar-logo img {
-    max-width: 80%; /* Adjust the size as needed */
+    max-width: 80%; 
     height: auto;
     border-radius: 50%;
 }
@@ -63,10 +63,10 @@
     font-size: 35px;
 }
 
-/* Mobile View */
+
 @media (max-width: 768px) {
     .grid-container {
-        grid-template-columns: 1fr; /* Single column */
+        grid-template-columns: 1fr; 
     }
 
     .grid-container > :nth-child(2) {
@@ -74,7 +74,7 @@
     }
 
     .item1 {
-        grid-row: 1; /* Navbar at the top */
+        grid-row: 1;
     }
 
     .navbar {
@@ -90,7 +90,7 @@
     }
 
     .navbar-logo img {
-        max-width: 20%; /* Reduce the size of the logo */
+        max-width: 20%; 
         height: auto;
     }
 
@@ -100,11 +100,11 @@
         width: 100%;
         margin-top: 10px;
         padding: 10px 0;
-        background-color: #faf1e8; /* Ensure background covers links */
+        background-color: #faf1e8; 
     }
 
     .navbar-links.open {
-        display: flex; /* Show links when toggle button is clicked */
+        display: flex; 
     }
 
     .navbar-toggle {
@@ -114,3 +114,59 @@
         cursor: pointer;
     }
 }
+
+.carousel {
+    width: 100%;
+    max-height: 500px; 
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-inner {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    animation: slide 9s infinite;
+}
+
+.carousel-inner img {
+    width: 100%;
+    flex-shrink: 0;
+    height: 100%; 
+    object-fit: cover;
+}
+
+@keyframes slide {
+    0%, 33.33% { transform: translateX(0); }
+    33.34%, 66.66% { transform: translateX(-100%); }
+    66.67%, 100% { transform: translateX(-200%); }
+}
+
+.carousel-radio-buttons {
+    position: absolute;
+    right: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+}
+
+.carousel-radio-buttons input[type="radio"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    background-color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.carousel-radio-buttons input[type="radio"]:checked {
+    background-color: #000;
+    border-color: #000;
+}
+
