@@ -1,0 +1,116 @@
+.grid-container {
+    display: grid;
+    grid-template: repeat(9, 1fr) / 20fr 80fr;
+    height: 100vh;
+    row-gap: 30px;
+}
+
+.item1 {
+    grid-row: span 9;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: #faf0e6;
+    color: white;
+    padding: 20px;
+    height: 100%;
+    position: relative;
+}
+
+.navbar-logo {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+
+.navbar-logo img {
+    max-width: 80%; /* Adjust the size as needed */
+    height: auto;
+    border-radius: 50%;
+}
+
+.navbar-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.navbar-links a {
+    color: #64605c;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.navbar-links a:hover {
+    background-color: #faf1e8;
+}
+
+.navbar-toggle {
+    display: none;
+    cursor: pointer;
+    background-color: #faf1e8;
+    padding: 10px;
+    border: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.navbar-toggle i {
+    font-size: 35px;
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* Single column */
+    }
+
+    .grid-container > :nth-child(2) {
+        margin-top: -30px; 
+    }
+
+    .item1 {
+        grid-row: 1; /* Navbar at the top */
+    }
+
+    .navbar {
+        height: auto;
+        padding: 10px;
+    }
+
+    .navbar-logo {
+        flex-grow: 1;
+        display: flex;
+        justify-content: flex-start;
+        padding-bottom: 5px;
+    }
+
+    .navbar-logo img {
+        max-width: 20%; /* Reduce the size of the logo */
+        height: auto;
+    }
+
+    .navbar-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+        padding: 10px 0;
+        background-color: #faf1e8; /* Ensure background covers links */
+    }
+
+    .navbar-links.open {
+        display: flex; /* Show links when toggle button is clicked */
+    }
+
+    .navbar-toggle {
+        display: block;
+        margin-left: auto;
+        font-size: 24px;
+        cursor: pointer;
+    }
+}

@@ -4,8 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
 </head>
 <body>
-    
+    <div class="grid-container">
+        <div class="item item1">
+            <div class="navbar ">
+                <div class="navbar-logo">
+                    <img src="./images/Logo.png" alt="Logo">
+                </div>
+                <button class="navbar-toggle" onclick="toggleNavbar()">
+                    <i class="bi bi-list"></i> <!-- Toggle icon -->
+                </button>
+                <div class="navbar-links">
+                    <a href="#">HOME</a>
+                    <a href="#">MERCHANDISING TEAM</a>
+                    <a href="#">QUALITY & SERVICES</a> 
+                    <a href="#">INFRASTRUCTURE</a> 
+                    <a href="#">CONTACT US</a>
+                </div>
+            </div>
+        </div>
+        <script>
+            function toggleNavbar() {
+                const navbarLinks = document.querySelector('.navbar-links');
+                navbarLinks.classList.toggle('open');
+            }
+        </script>
+    </div>
 </body>
 </html>
