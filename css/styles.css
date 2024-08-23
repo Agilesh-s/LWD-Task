@@ -214,6 +214,17 @@
   #slide3:checked ~ .carousel-slides {
     transform: translateX(-200%);
   }
+
+  @media (max-width: 768px) {
+    .carousel-heading{
+        font-size: 15px;
+    }
+
+    .carousel-description{
+        font-size: 22px;
+    }
+  }
+
   
   
 /* ABOUT COMPANY */
